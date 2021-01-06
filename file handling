@@ -1,0 +1,22 @@
+# File handling in pyhton 
+
+# Write to an existing file 
+f= open ('C:/Users/Admin/Desktop/python programs/shubham.txt',"a") #open the file with suitable mode( r,a,w,c) 
+f.write(" wellcome to python")# use write function & type what you want 
+f.close()  # close this file & re-open 
+
+f= open("C:/Users/Admin/Desktop/python programs/shubham.txt" , "rt") # here we open the file again with readable mode "r"
+print(f.read()) # use suitable reading function
+
+#
+a= open("C:\\Users\\Admin\\Desktop\\python programs\\demofile3.txt" , "w") 
+a.write (" whoops! I Have delete the items")
+a.close()
+a= open( "C:\\Users\\Admin\\Desktop\\python programs\\demofile3.txt", "r")
+print(a.readable())
+print(a.readable())
+print("the name of file is :", a.name) # to print the name of file
+print(a.tell())
+print("is the file is involved anywhere:",a.isatty())
+print( a.read())
+

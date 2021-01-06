@@ -1,0 +1,115 @@
+#tetse
+import sys
+print(sys.platform)   #prints the operating system in pc 
+print(2**100) # its print the 2  power 100 
+
+#test2 
+a="mac"
+b="jack"
+c="john"
+print(a,b,c)
+
+#test3 
+s="shubham"
+print(s +"chaudhari")
+
+#test 4
+s ="shubham"
+d= list(s)
+print(d)    #  here string is devided in to number of substring & its in List format .
+            #  result :  d=["s","h" ,"u","b","h","a","m"] 
+print(len(d)) # len = 7
+d[1]="s"
+print(d)
+d.append("append") # result  : d=["s","s","h" ,"u","b","h","a","m","append"] 
+d.extend("extend") #result :  d=["s","s","h" ,"u","b","h","a","m","append", "e","x","t","e","n","d"] 
+print(d)
+
+
+#test 5 ..........................
+b=bytearray(b'spam') #byte / list hybrid ahead 
+b.extend (b"eggs")   #to extend in bytearray
+print(b)
+print(b.decode()) #translate to normal string 
+
+#test 6..................
+_s= " Extream"               # string_variable .find(" string_element")
+print(_s.find("tr"))     # to find the location of the string element   
+#here "_s" is the string varibale ,  &  "tr" is the string element which you want to find position of it 
+
+e="xyz"
+print ( e.replace("xy","ab") )  # to replace the element of the string  # result : e= "abz"
+print(e) # result : e="xyz"
+'''Again, despite the names of these string methods, we are not changing the original
+strings here, but creating new strings as the results—because strings are immutable,
+this is the only way this can work'''
+
+''' test 7/////     " spliting of string" '''
+line = "dhruv,raj,shams"
+print( line.split (",") )     # Split on a delimiter into a list of substrings
+
+'''test8;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'''
+line = "dhruv,raj,shams"
+lineu= (line.upper())           # Upper- and lowercase conversions  : line.lower() - for lower case 
+print(lineu)
+
+m="INFOSYS"                   # lowercase conversions
+print(m.lower())
+
+'''TETST 9:::::::::::::::::::::::::::::::::::::::::::'''
+line = "dhruv,raj,shams"
+print(line.isalpha())       # Content tests: isalpha, isdigit, etc.
+
+d="shubham"
+print(d.isalpha())          # Result : true 
+print(d.isdigit())          # Result : False  
+
+e= "7777777"
+print(e.isdigit())         #Result :  True 
+print(e.isalpha())         #Result :  False
+
+'''test 10''' 
+
+line3 = 'aaa,bbb,ccccc,dd\n'
+print(" The origional line3 is :",line3)
+print(line3.rstrip())            # Remove whitespace characters on the right side 
+
+print( line3.rstrip().split(",") )
+
+
+# addition of string ... syntax      :    string_variable      . __add__("   ") 
+n="10"
+print( n.__add__("20") )
+
+d=20
+print(d.__add__(20))
+
+_b= "s\0b\00c"    # \0, a binary zero byte, does not terminate string
+print(_b)          # result :      s  b   c 
+
+
+s = 'A\nB\tC' # \n is end-of-line, \t is tab
+print(len(s)) # Each stands for just one character
+#result : 5 
+print(ord('\n')) # \n is a byte with the binary value 10 in ASCII
+#result :  10
+
+
+#method 11 (  msg writing)=  
+
+msg = """ Hello python , 
+          wellcome to python tutorial ! """
+print(msg)          
+          
+
+ 
+
+
+
+
+
+
+
+
+
+

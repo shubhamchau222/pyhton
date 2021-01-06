@@ -1,0 +1,91 @@
+# practice for file handling : PRACTICE FOR FILE HANDLING                                       DATE:- 02/02/2020
+# THIS FILE INCLUDES ( READ, WRIITE , DELETE , CREATE ) modes & DELETE MODE also
+
+# to open file formulae is  f= open( "file path.txt", "mode")
+#formulae for read this file is  print( file variable .read())
+
+f= open("C:/Users/Admin/Desktop/python programs/wheathe report file handling.txt","r")
+print(f.read()) 
+
+# result :-
+'''origional file is = Hello,Wellcome to Python!          date : 03/02/2020
+today's wheather is clear , Have a good day!.. ..
+Enjoy your day.'''
+
+# append operations :- formulae : - open ("file path.txt"," mode") here open("C:/Users/Admin/Desktop/python programs/wheathe report file handling.txt,"a")
+                                           #note :_ here " a" is for append  
+'''# * process:- 1. open file which you want to append  with append mode " a "
+            2. do write in to it  : formulae : - f.write( " type something" )
+            3. close the current file : formule : file name.close() :- here f.close()
+            4. reopen the same file : formulae same as step 1 : open ( "file path.txt"," r" ) Here we open the  file with read mode " r" 
+            5.print(f. read()) : read this file & get result : 
+            '''
+f= open ("C:/Users/Admin/Desktop/python programs/wheathe report file handling.txt","a")
+f.write(" new append is , HI I'M SHUBHAM , HOW IS GOING?")
+f.readable()
+f.close()
+# here we re-open the file to read it 
+f=open("C:/Users/Admin/Desktop/python programs/wheathe report file handling.txt","r")
+print( f.read()) 
+print(f.readline()) # BY USING READLINE SYNTAX WE WILL GWT ONLY 1 LINE TO READ 
+ 
+# after the append operations result is : - 
+'''" Hello,Wellcome to Python!                                                      date : 03/02/2020
+#today's wheather is clear , Have a good day!.. ..
+Enjoy your day..
+ new append is , HI I'M SHUBHAM , HOW IS GOING? new append is , HI I'M SHUBHAM , HOW IS GOING?" '''  
+
+# write or overwrite operations ( here we use write mode " w" )
+''' process: 1. open file which you want to append  with append mode " w "
+              2. do write in to it  : formulae : - f.write( " type something" )
+              3. close the current file : formule : file name.close() :- here f.close()
+              4. reopen the same file : formulae same as step 1 : open ( "file path.txt","r" ) Here we open the  file with read mode " r" 
+              5.print(f. read()) : read this file & get result : '''
+f= open( "C:/Users/Admin/Desktop/python programs/wheathe report file handling.txt","w")
+f.write(" HI shubham THIS IS THE OVERWRITE FILE & YOU ALREADY HAVE ENTERED IN TO IT PLZZ CHECK THE RESULT 2 & THIS ONE,you have erase all the data using over write function ")
+f.close()
+f=open("C:/Users/Admin/Desktop/python programs/wheathe report file handling.txt","r")
+print(f.read())
+#after the over_write operation result is:- 
+# result :- 
+'''HI shubham THIS IS THE OVERWRITE FILE & YOU ALREADY HAVE ENTERED IN TO IT PLZZ CHECK THE RESULT 2 & THIS ONE,
+you have erase all the data using over write function'''     
+
+##CREATE NEW FILE :- Mode :- "X"
+#syntax :-  variable name = open( "file path.txt"," create syntax i'e "X")
+#            such as.... a= open("C:/Users/Admin/Desktop/python programs/FILENAME.txt" , "x")
+f=open("C:/Users/Admin/Desktop/python programs/newfile.txt","x")
+#HERE FILE IS ALREADY EXIST HENCE SHOWS THE ERROR
+
+
+
+
+
+
+# DELETE THE FILE 
+# TO DELET THE FILE YOU MUST CALL : " import os " FUNCTION 
+# AT FIRST CHECK THE AVAILIBILY OF THE FILE
+''' SYNTAX ;-  import os
+               os.remove("file path")
+'''               
+import os
+if os.path.exists("C:/Users/Admin/Desktop/python programs/SHUBHAM.txt"):
+    os.remove("C:/Users/Admin/Desktop/python programs/SHUBHAM.txt") #IT'S THE SYNTAX FOR DELETE 
+    print(" YOUR FILE IS DELETED SUCCESSFULLY")
+else:
+    print("THE FILE YOU aRe SEARCHING FOR IS NOT EXIST")    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
